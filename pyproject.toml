@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "placeholder-flask"
+version = "0.1.0"
+description = "Placeholder flask app"
+authors = ["arabidopsis <ian.castleden@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^3.0.2"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
