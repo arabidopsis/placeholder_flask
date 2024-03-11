@@ -11,6 +11,9 @@ python = "^3.11"
 Flask = "^3.0.2"
 python-dotenv = "^1.0.1"
 
+[tool.poetry.group.install.dependencies]
+footprint = { git = "https://github.com/arabidopsis/footprint.git", branch = "main" }
+gunicorn = "^21.2.0"
 
 [build-system]
 requires = ["poetry-core"]
