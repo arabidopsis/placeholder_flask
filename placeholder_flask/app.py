@@ -14,5 +14,5 @@ def index(path=""):
 
 
 
-app.config.from_object("app.config")
-app.config.from_pyfile("app.cfg", silent=True)
+app.config.from_object("placeholder_flask.config")
+app.config.from_pyfile("placeholder-flask.cfg", silent=True)

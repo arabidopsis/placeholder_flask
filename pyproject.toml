@@ -1,20 +1,25 @@
-[tool.poetry]
+[project]
 name = "placeholder-flask"
 version = "0.1.0"
 description = "Placeholder flask app"
-authors = ["arabidopsis <ian.castleden@gmail.com>"]
-license = "MIT"
+authors = [{ name = "arabidopsis", email = "ian.castleden@gmail.com" }]
+requires-python = ">=3.11"
 readme = "README.md"
+license = "MIT"
+dependencies = [
+    "Flask>=3.0.2,<4",
+    "python-dotenv>=1.0.1,<2",
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-Flask = "^3.0.2"
-python-dotenv = "^1.0.1"
+[dependency-groups]
+install = [
+    "flask-nginx>=0.8.5,<0.9",
+    "gunicorn>=21.2.0,<22",
+]
 
-[tool.poetry.group.install.dependencies]
-footprint = { git = "https://github.com/arabidopsis/footprint.git", branch = "main" }
-gunicorn = "^21.2.0"
+[tool.uv]
+default-groups = ["install"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,2 +1,2 @@
 FLASK_DEBUG=1
-FLASK_APP="app.wsgi"
+FLASK_APP="placeholder_flask.wsgi"
