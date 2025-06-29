@@ -57,7 +57,7 @@
     </style>
 </head>
 <body>
-        <h1>{{config.TITLE}}</h1>
+        <h1>{{config.TITLE|safe}}</h1>
     <p> <a href="{{ request.referrer  or  url_for('index') }}"> Back </a> </p>
 </body>
 </html>
